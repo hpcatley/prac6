@@ -18,4 +18,4 @@ class BigNumCalc {
 
 
 
-#endif BIGNUMCALC_H
+#endif
