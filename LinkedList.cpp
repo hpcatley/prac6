@@ -25,7 +25,7 @@ void LinkedList::insertPosition(int pos, int newNum) {
     if(pos<=1) {
         pos = 1;
     }
-    Node* newNode;
+    Node* newNode = new Node(newNum);
 
     // If pos is 1 put the new node as the head.
     if(pos==1) {
