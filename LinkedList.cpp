@@ -92,8 +92,8 @@ int LinkedList::search(int target) {
 }
 
 void LinkedList::printList() { 
-    Node* currentNode = head;
     std::cout << "[";
+    Node* currentNode = head;
     while(currentNode!= nullptr) {
         std::cout << currentNode->data;
         currentNode = currentNode->link;
