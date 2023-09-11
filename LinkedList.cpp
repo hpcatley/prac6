@@ -84,6 +84,7 @@ int LinkedList::get(int pos) {
     if(currentNode != nullptr) {
         return currentNode->data;
     }
+    return std::numeric_limits < int >::max();
 }
 
 int LinkedList::search(int target) { 
