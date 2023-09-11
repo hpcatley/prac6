@@ -44,7 +44,6 @@ void LinkedList::insertPosition(int pos, int newNum) {
 bool LinkedList::deletePosition(int pos) { 
     if (pos<1) {
         return false;
-
     } else {
         Node* currentNode;
         currentNode->link = head;
@@ -94,10 +93,13 @@ int LinkedList::search(int target) {
 
 void LinkedList::printList() { 
     Node* currentNode = head;
+    std::cout << "[";
     while(currentNode!= nullptr) {
-        std::cout << currentNode->data << " ";
-        if(currentNode == nullptr) {
-            break;
+        std::cout << currentNode->data;
+        currentNode = currentNode->link;
+        if(currentNode != nullptr) {
+            std::cout << " ";
         }
     }
+    std::cout << "]";
 }
