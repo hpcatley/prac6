@@ -2,7 +2,6 @@
 #include <iterator>
 #include <limits>
 #include "LinkedList.h"
-#include "Node.h"
 
 LinkedList::LinkedList() : head(nullptr) {}
 
