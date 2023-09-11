@@ -47,26 +47,56 @@ bool LinkedList::deletePosition(int pos) {
     } else {
         Node* currentNode;
         currentNode->link = head;
-        while(currentNode->link != nullptr) {
+        int currentPos = 1;
+        while(currentNode->link != nullptr && currentPos < pos-1) {
             currentNode = currentNode->link;
+            currentPos++;
         }
         if(currentNode->link == nullptr) {
             return false;
         }
-        
+        else {
+            delete currentNode;
+            return true;
+        }
     }
 }
 
-int get(int pos) { }
+int LinkedList::get(int pos) { 
+    if(pos<1) {
+        std::numeric_limits < int >::max();
+    }
+    Node* currentNode;
+    currentNode->link = head;
+    int currentPos = 1;
+    while(currentNode->link != nullptr && currentPos<pos-1) {
+        currentNode = currentNode->link;
+        currentPos++;
+    }
+    return currentNode->data;
+}
 
-int search(int target) { }
+int LinkedList::search(int target) { 
+    Node* currentNode = head;
+    int currentPos = 1;
 
-void printList() { }
+    while(currentNode->link != nullptr) {
+        if(currentNode->data == target) {
+            return currentPos;
+            break;
+        }
+        currentNode = currentNode->link;
+        currentPos++;
+        return -1;
+    }
+}
 
-
-
-
-int main() {
-
-    return 0;
+void LinkedList::printList() { 
+    Node* currentNode = head;
+    while(currentNode!= nullptr) {
+        std::cout << currentNode->data << " ";
+        if(currentNode == nullptr) {
+            break;
+        }
+    }
 }
