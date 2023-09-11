@@ -32,6 +32,8 @@ class LinkedList {
         // Print whole list, separated by spaces and encapsulate in [ ];
         // E.g [1 2 3 4 5] or in the case of nothing print nothing.
         void printList();  
+
+        friend class BigNumCalc;
 };
 
 #endif
