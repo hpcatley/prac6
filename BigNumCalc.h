@@ -4,7 +4,7 @@
 #include <iostream>
 #include <list>
 
-class bigNumCalc {
+class BigNumCalc {
     protected:
         int num1;
         int num2;
